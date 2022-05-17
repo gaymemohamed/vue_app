@@ -13,6 +13,11 @@
 
     <div id="app">
         <p>{{ title }} - {{ age }} - {{ gender }}</p>
+        <button v-on:click="age++">Increase age</button> <!-- traditional way to make event -->
+        <button @click="age--">decrease age</button>    <!-- v-on shortcode @ -->  
+        <div @click="changeTitle">Change Book Title</div> <!-- get the method from app vue without parameter --> 
+        <div @click="changeTitle('Sayed')">Change Book Title with param</div> <!-- get the method from app vue without parameter --> 
+
     </div>
 
     <script src="app.js"></script>
